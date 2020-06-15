@@ -5,14 +5,21 @@ import './SecondSection.scss';
 export function SecondSection(props) {
 	const { scrollPosition, windowHeight, borderWidth } = props;
 	const [titleTextIsVisible, setTitleTextIsVisible] = useState(false);
+	const [skillsSectionIsVisible, setSkillsSectionIsVisible] = useState(false);
 	const titleTextVisibilityMarker = useRef(null);
+	const skillsSectionVisibilityMarker = useRef(null);
+	const [skillsSectionOffset, setSkillsSectionOffset] = useState(0);
 
 	useEffect(() => {
-		if (titleTextVisibilityMarker.current) {
+		if (!titleTextIsVisible) {
 			setTitleTextIsVisible(
 				titleTextVisibilityMarker.current.getBoundingClientRect().bottom - windowHeight - borderWidth < 0);
 		}
-	}, [scrollPosition, windowHeight, borderWidth]);
+		setSkillsSectionOffset(
+			(skillsSectionVisibilityMarker.current.getBoundingClientRect().top - (windowHeight / 2) - borderWidth) / 2
+		);
+		if (!skillsSectionIsVisible && skillsSectionOffset < 0) setSkillsSectionIsVisible(true);
+	}, [scrollPosition, windowHeight, borderWidth, titleTextIsVisible, skillsSectionOffset, skillsSectionIsVisible]);
 
 	return (
 		<div className="second-section">
@@ -28,11 +35,70 @@ export function SecondSection(props) {
 				</div>
 			</div>
 			<div className="content-section">
-				<p className="text">
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Id beatae nam deleniti cum itaque, sapiente aliquam quis officia ratione voluptatum ipsa voluptate minima, illo vitae quos quaerat architecto. Accusantium quisquam asperiores, rerum sunt dolores veniam saepe facilis commodi fugit cumque similique laborum voluptatem quia eveniet! Deserunt repellat fugiat error sunt consectetur, numquam, explicabo atque cumque totam deleniti unde doloremque illum. Aspernatur, ratione dolor. Quaerat nobis sint unde ratione fugiat ut rerum incidunt ea architecto fugit quos voluptatum quidem, ad nostrum optio maiores, nisi, iure aliquid eum recusandae tempore officia blanditiis nulla! Non quod quaerat culpa itaque eaque exercitationem? Esse ex repellat maxime reiciendis, quam voluptatibus eaque repudiandae explicabo temporibus possimus commodi animi exercitationem architecto numquam odit dolore saepe neque consectetur! Nihil accusamus nemo deleniti dolore eius porro? Qui maiores saepe sapiente, corrupti doloremque, obcaecati minima ex dolor mollitia nostrum dicta nihil nulla repellendus enim aut eaque reprehenderit necessitatibus deserunt in impedit quibusdam magnam dolorum! Beatae sit cum numquam praesentium saepe quis, quo provident mollitia aperiam. Fugit eum, nulla autem natus provident voluptatibus asperiores distinctio. Ex, ab? Voluptate a provident nobis corrupti dolorem sunt facilis beatae architecto illum doloremque dolores asperiores quas dolorum quibusdam natus quos, aperiam praesentium! Magni ad quam esse dolor? Ab nisi, repellat omnis error unde praesentium culpa, odit quis pariatur, eum provident a cupiditate voluptatem hic reiciendis ad ex natus nulla ut sequi voluptas quidem iste? Aperiam quo dolorum nobis accusamus dolor distinctio eum accusantium vitae cumque molestiae. Iste nobis enim error iure quam atque, omnis natus veritatis est accusamus expedita ullam. Error recusandae repellendus, quam reiciendis amet sint molestiae expedita voluptatem ipsum minima consequuntur eum adipisci sit ad, facilis vitae id hic quo quae fuga. Quibusdam ipsam quas quae praesentium totam! Saepe in asperiores facere possimus culpa fugit ullam animi fuga laboriosam quidem! Nesciunt, laboriosam veritatis.
-				</p>
-				<div className="skills-section">
-
+				<div className="text-section">
+					<p className="text">
+						I am a <b>Typescript</b> developer who loves building exciting, engaging, experiences
+					on the web using <b>React</b>.
+					</p>
+					<p className="text">
+						With an eye for detail, a passion for aesthetics, and a knack for design
+						I can join the design process and provide the sort of insight only a developer
+						can.
+					</p>
+					<p className="text">
+						I believe that animation can play a huge role in affecting how the user percieves the
+						software. Finely tuned animations, designed to aid the user in understanding the flow of
+						data, can turn a good app into a great app.
+					</p>
+				</div>
+				<div ref={skillsSectionVisibilityMarker} className="skills-section-main-wrapper">
+					<div className={`skills-section-offset-wrapper${skillsSectionIsVisible ? " visible" : ""}`} style={{ top: `${skillsSectionOffset}px` }}>
+						<div className="section-wrapper developer">
+							<div className="title-wrapper">
+								<div className={`zigzag-wrapper${skillsSectionIsVisible ? " visible" : ""}`}>
+									<Zigzag className="zigzag" />
+								</div>
+								<h2 className="title">Developer</h2>
+							</div>
+							<div className="skills-wrapper developer desktop">
+								<p>Typescript</p>
+								<p>Jest</p>
+								<p>React</p>
+								<p>Puppeteer</p>
+								<p>Redux</p>
+								<p>Webpack</p>
+								<p>SCSS</p>
+								<p>Git</p>
+								<p>CSS Animations</p>
+								<p>Greensock</p>
+							</div>
+							<div className="skills-wrapper developer mobile">
+								<p>Typescript</p>
+								<p>React</p>
+								<p>Redux</p>
+								<p>SCSS</p>
+								<p>CSS Animations</p>
+								<p>Jest</p>
+								<p>Puppeteer</p>
+								<p>Webpack</p>
+								<p>Git</p>
+								<p>Greensock</p>
+							</div>
+						</div>
+						<div className="section-wrapper designer">
+							<div className="title-wrapper">
+								<div className={`zigzag-wrapper${skillsSectionIsVisible ? " visible" : ""}`}>
+									<Zigzag className="zigzag" />
+								</div>
+								<h2 className="title">Designer</h2>
+							</div>
+							<div className="skills-wrapper designer">
+								<p>Adobe XD</p>
+								<p>Adobe Photoshop</p>
+								<p>Balsamiq</p>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>

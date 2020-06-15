@@ -5,18 +5,17 @@
 	padding-right: var(--border-width);
 	position: relative;
 	background: var(--secondary-color);
-	height: 110vh;
 	margin-bottom: 100vh;
 	z-index: 20;
 	display: flex;
 	flex-direction: column;
 	.title-section {
+		padding-left: 15%;
 		.zigzag-wrapper {
 			width: 0px;
 			height: 20px;
 			overflow: hidden;
 			transition: 1s;
-			transition-delay: 0s;
 			transition-timing-function: ease-out;
 			margin-bottom: -10px;
 			&.visible {
@@ -40,25 +39,111 @@
 				color: var(--primary-color);
 				transition: 0.5s;
 				transition-timing-function: ease-out;
-				transition-delay: 0s;
 				transform: translateY(100%);
 				&.visible {
-					transition-delay: 0.6s;
 					transform: translateY(0%);
 				}
 			}
 		}
 	}
 	.content-section {
-		margin-top: 40px;
+		margin-top: 100px;
 		display: flex;
-		.text {
+		align-items: flex-start;
+		.text-section {
 			flex-basis: 50%;
+			padding-left: 15%;
+			padding-right: 5%;
+			.text {
+				font-size: 16px;
+				line-height: 32px;
+				color: var(--readable-faded-primary-color);
+				b {
+					color: var(--readable-primary-color);
+				}
+			}
 		}
-		.skills-section {
+		.skills-section-main-wrapper {
 			flex-basis: 50%;
-			background: var(--readable-primary-color);
+			display: flex;
+			.skills-section-offset-wrapper {
+				width: 100%;
+				position: relative;
+				display: flex;
+				color: var(--readable-secondary-color);
+				background: var(--readable-primary-color);
+				padding: 0 100px 0 0;
+				transition: padding 0.5s;
+				&::after {
+					content: "";
+					position: absolute;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					background: var(--secondary-color);
+					transition: 0.5s;
+				}
+				&.visible {
+					padding: 0 50px 0 50px;
+					&::after {
+						width: 0%;
+					}
+				}
+				.section-wrapper {
+					display: flex;
+					flex-direction: column;
+					margin-bottom: 50px;
+					&.developer {
+						flex-basis: 66%;
+					}
+					&.designer {
+						flex-basis: 33%;
+					}
+					.title-wrapper {
+						.zigzag-wrapper {
+							margin: 40px 0 0 0;
+							width: 30px;
+							height: 20px;
+							overflow: hidden;
+							transition: 1s;
+							transition-timing-function: ease-out;
+							transition-delay: 1s;
+							margin-bottom: -20px;
+							&.visible {
+								transition-delay: 0.2s;
+								width: 30px;
+							}
+							.zigzag {
+								width: 30px;
+								stroke: var(--border-color);
+							}
+						}
+						.title {
+							text-transform: uppercase;
+						}
+					}
+					.skills-wrapper {
+						display: flex;
+						&.developer {
+							flex-wrap: wrap;
+							p {
+								flex-basis:	50%;
+							}
+						}
+						&.designer {
+							flex-direction: column;
+						}
+						p {
+							opacity: 0.5;
+							line-height: 32px;
+							margin: 0;
+						}
+						&.mobile {
+							display: none;
+						}
+					}
+				}
+			}
 		}
 	}
 }
-	
