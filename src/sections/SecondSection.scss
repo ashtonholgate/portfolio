@@ -1,26 +1,64 @@
 @import "../variables.scss";
 
 .second-section {
-	padding: var(--border-width);
+	padding: calc(var(--border-width) + 80px);
+	padding-right: var(--border-width);
 	position: relative;
 	background: var(--secondary-color);
-	background-size: 100%;
-	height: 100vh;
+	height: 110vh;
 	margin-bottom: 100vh;
 	z-index: 20;
-	.zigzag-wrapper {
-		width: 0px;
-		height: 20px;
-		overflow: hidden;
-		transition: 1s;
-		transition-delay: 0.2s;
-		transition-timing-function: ease-out;
-		&.visible {
-			width: 50px;
+	display: flex;
+	flex-direction: column;
+	.title-section {
+		.zigzag-wrapper {
+			width: 0px;
+			height: 20px;
+			overflow: hidden;
+			transition: 1s;
+			transition-delay: 0s;
+			transition-timing-function: ease-out;
+			margin-bottom: -10px;
+			&.visible {
+				transition-delay: 0.2s;
+				width: 70px;
+			}
+			.zigzag {
+				width: 70px;
+				stroke: var(--primary-color);
+			}
+		}
+		.text-wrapper {
+			width: 100%;
+			margin-bottom: -40px;
+			overflow: hidden;
+			.text {
+				text-transform: uppercase;
+				margin: 0;
+				font-size: 92px;
+				font-weight: 900;
+				color: var(--primary-color);
+				transition: 0.5s;
+				transition-timing-function: ease-out;
+				transition-delay: 0s;
+				transform: translateY(100%);
+				&.visible {
+					transition-delay: 0.6s;
+					transform: translateY(0%);
+				}
+			}
 		}
 	}
-	.zigzag {
-		width: 50px;
-		stroke: var(--primary-color);
+	.content-section {
+		margin-top: 40px;
+		display: flex;
+		.text {
+			flex-basis: 50%;
+		}
+		.skills-section {
+			flex-basis: 50%;
+			background: var(--readable-primary-color);
+		}
 	}
 }
+	
