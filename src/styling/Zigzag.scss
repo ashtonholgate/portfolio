@@ -1,0 +1,10 @@
+@import "../variables.scss";
+
+.zigzag-component {
+	fill: transparent;
+	stroke-width: 5px;
+	polyline {
+		stroke-dashoffset: "2e-05";
+		stroke-dasharray: "none"
+	}
+}

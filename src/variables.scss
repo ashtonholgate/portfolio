@@ -1,0 +1,19 @@
+$desktop-large-width: 1920px;
+$desktop-medium-width: 1440px;
+$desktop-small-width: 1200px;
+$tablet-large-width: 900px;
+$tablet-medium-width: 768px;
+$tablet-small-width: 580px;
+$mobile-large-width: 500px;
+$mobile-medium-width: 460px;
+$mobile-small-width: 420px;
+
+:root {
+	--border-color: white;
+	--primary-color: #ff5851;
+	--secondary-color: #f8f8f8;
+	--readable-primary-color: #1c1b20;
+	--readable-secondary-color: white;
+	
+	--color-change-speed: 0.6s;
+}

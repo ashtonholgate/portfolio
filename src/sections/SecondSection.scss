@@ -1,0 +1,26 @@
+@import "../variables.scss";
+
+.second-section {
+	padding: var(--border-width);
+	position: relative;
+	background: var(--secondary-color);
+	background-size: 100%;
+	height: 100vh;
+	margin-bottom: 100vh;
+	z-index: 20;
+	.zigzag-wrapper {
+		width: 0px;
+		height: 20px;
+		overflow: hidden;
+		transition: 1s;
+		transition-delay: 0.2s;
+		transition-timing-function: ease-out;
+		&.visible {
+			width: 50px;
+		}
+	}
+	.zigzag {
+		width: 50px;
+		stroke: var(--primary-color);
+	}
+}

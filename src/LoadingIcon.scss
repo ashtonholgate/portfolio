@@ -1,0 +1,23 @@
+@import"./variables.scss";
+
+.loading-icon {
+	display: grid;
+	grid-template-columns: 20px 20px 20px;
+	grid-template-rows: 20px 20px 20px;
+	gap: 20px;
+	.item {
+		opacity: 0;
+		background: var(--secondary-color);
+		animation: loading-icon-animation 0.5s infinite;
+		animation-iteration-count: 2;
+	}
+}
+
+@keyframes loading-icon-animation {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
+}
