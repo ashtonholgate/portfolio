@@ -5,12 +5,23 @@
 	padding-right: var(--border-width);
 	position: relative;
 	background: var(--secondary-color);
-	margin-bottom: 100vh;
 	z-index: 20;
 	display: flex;
 	flex-direction: column;
+	min-height: 100vh;
+	margin-bottom: 100vh;
+	@media (max-width: $desktop-small-width) {
+		padding: var(--border-width);
+	}
 	.title-section {
 		padding-left: 15%;
+		margin-bottom: 40px;
+		@media (max-width: $desktop-small-width) {
+			padding-left: 15%;
+		}
+		@media (max-width: $mobile-large-width) {
+			margin-top: 40px;
+		}
 		.zigzag-wrapper {
 			width: 0px;
 			height: 20px;
@@ -31,12 +42,16 @@
 			width: 100%;
 			margin-bottom: -40px;
 			overflow: hidden;
+			font-weight: 900;
+			color: var(--primary-color);
 			.text {
-				text-transform: uppercase;
-				margin: 0;
 				font-size: 92px;
-				font-weight: 900;
-				color: var(--primary-color);
+				@media (max-width: $tablet-large-width) {
+					font-size: 62px;
+					margin-bottom: 10px;
+				}
+				margin: 0;
+				text-transform: uppercase;
 				transition: 0.5s;
 				transition-timing-function: ease-out;
 				transform: translateY(100%);
@@ -47,13 +62,20 @@
 		}
 	}
 	.content-section {
-		margin-top: 100px;
 		display: flex;
 		align-items: flex-start;
+		@media (max-width: $desktop-small-width) {
+			align-items: unset;
+			flex-direction: column;
+		}
 		.text-section {
 			flex-basis: 50%;
 			padding-left: 15%;
 			padding-right: 5%;
+			@media (max-width: $desktop-small-width) {
+				padding-right: 15%;
+				padding-bottom: 40px;
+			}
 			.text {
 				font-size: 16px;
 				line-height: 32px;
@@ -83,6 +105,17 @@
 					background: var(--secondary-color);
 					transition: 0.5s;
 				}
+				@media (max-width: $desktop-small-width) {
+					position: unset;
+					padding-left: 15% !important;
+					padding-right: 15% !important;
+				}
+				@media (max-width: $tablet-small-width) {
+					flex-direction: column;
+				}
+				@media (max-width: $tablet-small-width) {
+					padding-bottom: 40px !important;
+				}
 				&.visible {
 					padding: 0 50px 0 50px;
 					&::after {
@@ -93,6 +126,9 @@
 					display: flex;
 					flex-direction: column;
 					margin-bottom: 50px;
+					@media (max-width: $tablet-small-width) {
+						margin-bottom: 0;
+					}
 					&.developer {
 						flex-basis: 66%;
 					}
@@ -127,7 +163,21 @@
 						&.developer {
 							flex-wrap: wrap;
 							p {
-								flex-basis:	50%;
+								flex-basis: 50%;
+							}
+							&.desktop {
+								@media (max-width: $tablet-small-width) {
+									display: none;
+								}
+							}
+							&.small-tablet {
+								display: none;
+								@media (max-width: $tablet-small-width) {
+									display: flex;
+									p {
+										flex-basis: 100%;
+									}
+								}
 							}
 						}
 						&.designer {
@@ -137,9 +187,6 @@
 							opacity: 0.5;
 							line-height: 32px;
 							margin: 0;
-						}
-						&.mobile {
-							display: none;
 						}
 					}
 				}

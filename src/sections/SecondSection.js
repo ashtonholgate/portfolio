@@ -18,7 +18,7 @@ export function SecondSection(props) {
 		setSkillsSectionOffset(
 			(skillsSectionVisibilityMarker.current.getBoundingClientRect().top - (windowHeight / 2) - borderWidth) / 2
 		);
-		if (!skillsSectionIsVisible && skillsSectionOffset < 0) setSkillsSectionIsVisible(true);
+		if (!skillsSectionIsVisible && skillsSectionVisibilityMarker.current.getBoundingClientRect().top - (windowHeight * 0.75) - borderWidth < 0) setSkillsSectionIsVisible(true);
 	}, [scrollPosition, windowHeight, borderWidth, titleTextIsVisible, skillsSectionOffset, skillsSectionIsVisible]);
 
 	return (
@@ -72,7 +72,7 @@ export function SecondSection(props) {
 								<p>CSS Animations</p>
 								<p>Greensock</p>
 							</div>
-							<div className="skills-wrapper developer mobile">
+							<div className="skills-wrapper developer small-tablet">
 								<p>Typescript</p>
 								<p>React</p>
 								<p>Redux</p>
