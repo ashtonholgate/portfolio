@@ -1,8 +1,8 @@
 import React from 'react';
 import { ScrollReminder } from '../ScrollReminder';
-import './FirstSection.scss';
+import './IntroSection.scss';
 
-export function FirstSection(props) {
+export function IntroSection(props) {
 	const {
 		isLoading,
 		initializationIsComplete,
@@ -13,7 +13,7 @@ export function FirstSection(props) {
 	} = props;
 
 	return (
-		<div className="first-section">
+		<div className="intro-section">
 			<div className={`wrapper${isLoading ? " init" : ""}${scrollPosition !== 0 ? " shifted" : ""}`}
 				style={{
 					position: windowWidth > 500 ? "fixed" : "",

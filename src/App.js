@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import './App.scss';
 import { LoadingIcon } from './LoadingIcon';
-import { FirstSection } from './sections/FirstSection';
-import { SecondSection } from './sections/SecondSection';
+import { IntroSection } from './sections/IntroSection';
+import { AboutMeSection } from './sections/AboutMeSection';
+import { ProjectsSection } from './sections/ProjectsSection';
 
 function App() {
 	const [isLoading, setIsLoading] = useState(true);
@@ -68,7 +69,7 @@ function App() {
 			</div>
 			<div className={`white-border${isLoading ? "" : " visible"}`} />
 			<>
-				<FirstSection
+				<IntroSection
 					isLoading={isLoading}
 					initializationIsComplete={initializationIsComplete}
 					titleTextIsVisible={titleTextIsVisible}
@@ -77,12 +78,20 @@ function App() {
 					windowWidth={windowWidth}
 				/>
 				{!isLoading &&
-					<SecondSection
-						scrollPosition={scrollPosition}
-						borderWidth={borderWidth}
-						windowHeight={windowHeight}
-						windowWidth={windowWidth}
-					/>
+					<>
+						<AboutMeSection
+							scrollPosition={scrollPosition}
+							borderWidth={borderWidth}
+							windowHeight={windowHeight}
+							windowWidth={windowWidth}
+						/>
+						<ProjectsSection
+							scrollPosition={scrollPosition}
+							borderWidth={borderWidth}
+							windowHeight={windowHeight}
+							windowWidth={windowWidth}
+						/>
+					</>
 				}
 			</>
 		</div>

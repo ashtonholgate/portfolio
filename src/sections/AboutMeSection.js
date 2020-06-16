@@ -1,8 +1,8 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { Zigzag } from '../styling/Zigzag';
-import './SecondSection.scss';
+import './AboutMeSection.scss';
 
-export function SecondSection(props) {
+export function AboutMeSection(props) {
 	const { scrollPosition, windowHeight, borderWidth } = props;
 	const [titleTextIsVisible, setTitleTextIsVisible] = useState(false);
 	const [skillsSectionIsVisible, setSkillsSectionIsVisible] = useState(false);
@@ -15,14 +15,16 @@ export function SecondSection(props) {
 			setTitleTextIsVisible(
 				titleTextVisibilityMarker.current.getBoundingClientRect().bottom - windowHeight - borderWidth < 0);
 		}
+		const bottom = skillsSectionVisibilityMarker.current.getBoundingClientRect().bottom;
+		const height = skillsSectionVisibilityMarker.current.getBoundingClientRect().height;
 		setSkillsSectionOffset(
-			(skillsSectionVisibilityMarker.current.getBoundingClientRect().top - (windowHeight / 2) - borderWidth) / 2
+			(skillsSectionVisibilityMarker.current.getBoundingClientRect().top - (windowHeight / 2) + (height / 2) - borderWidth) / 2
 		);
-		if (!skillsSectionIsVisible && skillsSectionVisibilityMarker.current.getBoundingClientRect().top - (windowHeight * 0.75) - borderWidth < 0) setSkillsSectionIsVisible(true);
+		if (!skillsSectionIsVisible && skillsSectionVisibilityMarker.current.getBoundingClientRect().top - (windowHeight / 1.5) - borderWidth < 0) setSkillsSectionIsVisible(true);
 	}, [scrollPosition, windowHeight, borderWidth, titleTextIsVisible, skillsSectionOffset, skillsSectionIsVisible]);
 
 	return (
-		<div className="second-section">
+		<div className="about-me-section">
 			<div ref={titleTextVisibilityMarker} className="title-section">
 				<div className={`zigzag-wrapper${titleTextIsVisible ? " visible" : ""}`}>
 					<Zigzag className="zigzag" />

@@ -1,0 +1,128 @@
+@import "../variables.scss";
+
+.projects-section {
+	padding: calc(var(--border-width) + 80px);
+	padding-right: var(--border-width);
+	position: relative;
+	background: var(--secondary-color);
+	z-index: 20;
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 100vh;
+	@media (max-width: $desktop-small-width) {
+		padding: var(--border-width);
+	}
+	.title-section {
+		padding-left: 15%;
+		margin-bottom: 40px;
+		@media (max-width: $desktop-small-width) {
+			padding-left: 15%;
+		}
+		@media (max-width: $mobile-large-width) {
+			margin-top: 40px;
+		}
+		.zigzag-wrapper {
+			width: 0px;
+			height: 20px;
+			overflow: hidden;
+			transition: 1s;
+			transition-timing-function: ease-out;
+			margin-bottom: -10px;
+			&.visible {
+				transition-delay: 0.2s;
+				width: 70px;
+			}
+			.zigzag {
+				width: 70px;
+				stroke: var(--readable-primary-color);
+			}
+		}
+		.text-wrapper {
+			width: 100%;
+			margin-bottom: -40px;
+			overflow: hidden;
+			font-weight: 900;
+			color: var(--readable-primary-color);
+			.text {
+				font-size: 92px;
+				@media (max-width: $tablet-large-width) {
+					font-size: 62px;
+					margin-bottom: 10px;
+				}
+				margin: 0;
+				text-transform: uppercase;
+				transition: 0.5s;
+				transition-timing-function: ease-out;
+				transform: translateY(100%);
+				&.visible {
+					transform: translateY(0%);
+				}
+			}
+		}
+	}
+	.content-section {
+		display: flex;
+		// align-items: flex-start;
+		@media (max-width: $desktop-small-width) {
+			align-items: unset;
+			flex-direction: column;
+		}
+		.text-section {
+			flex-basis: 50%;
+			padding-left: 15%;
+			padding-right: 5%;
+			@media (max-width: $desktop-small-width) {
+				padding-right: 15%;
+				padding-bottom: 40px;
+			}
+			.text {
+				font-size: 16px;
+				line-height: 32px;
+				color: var(--readable-faded-primary-color);
+				b {
+					color: var(--readable-primary-color);
+				}
+			}
+		}
+		.wwyw-image-wrapper {
+			flex-basis: 50%;
+			display: flex;
+			.wwywe-image {
+				width: 400px;
+				height: 400px;
+				position: relative;
+				background-image: url(../images/WWYWE.png);
+				background-position: center;
+				background-size: cover;
+				border: 20px solid white;
+				box-shadow: 0 3px 6px rgba(0,0,0,0.16);
+				opacity: 0;
+				transition: transform 0.5s, opacity 0.5s;
+				transform: rotate(35deg) scale(1.5);
+				&.visible {
+					transform: rotate(-15deg) scale(1);
+					opacity: 1;
+				}
+			}
+			.wwywl-image {
+				width: 400px;
+				height: 400px;
+				position: relative;
+				background-image: url(../images/WWYWL.png);
+				background-position: center;
+				background-size: cover;
+				border: 20px solid white;
+				box-shadow: 0 3px 6px rgba(0,0,0,0.16);
+				opacity: 0;
+				margin-left: -100px;
+				transition: transform 0.5s, opacity 0.5s;
+				transition-delay: 0.2s;
+				transform: rotate(35deg) scale(1.5);
+				&.visible {
+					transform: rotate(15deg) scale(1);
+					opacity: 1;
+				}
+			}
+		}
+	}
+}

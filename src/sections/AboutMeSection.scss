@@ -1,6 +1,6 @@
 @import "../variables.scss";
 
-.second-section {
+.about-me-section {
 	padding: calc(var(--border-width) + 80px);
 	padding-right: var(--border-width);
 	position: relative;
@@ -8,8 +8,6 @@
 	z-index: 20;
 	display: flex;
 	flex-direction: column;
-	min-height: 100vh;
-	margin-bottom: 100vh;
 	@media (max-width: $desktop-small-width) {
 		padding: var(--border-width);
 	}
