@@ -4,6 +4,7 @@ import { LoadingIcon } from './LoadingIcon';
 import { IntroSection } from './sections/IntroSection';
 import { AboutMeSection } from './sections/AboutMeSection';
 import { ProjectsSection } from './sections/ProjectsSection';
+import { ExperienceSection } from './sections/ExperienceSection';
 
 function App() {
 	const [isLoading, setIsLoading] = useState(true);
@@ -80,6 +81,12 @@ function App() {
 				{!isLoading &&
 					<>
 						<AboutMeSection
+							scrollPosition={scrollPosition}
+							borderWidth={borderWidth}
+							windowHeight={windowHeight}
+							windowWidth={windowWidth}
+						/>
+						<ExperienceSection
 							scrollPosition={scrollPosition}
 							borderWidth={borderWidth}
 							windowHeight={windowHeight}

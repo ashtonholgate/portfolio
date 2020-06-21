@@ -1,6 +1,6 @@
 @import "../variables.scss";
 
-.projects-section {
+.experience-section {
 	padding: calc(var(--border-width) + 80px);
 	padding-right: var(--border-width);
 	position: relative;
@@ -30,6 +30,7 @@
 			&.visible {
 				transition-delay: 0.2s;
 				width: 70px;
+		
 			}
 			.zigzag {
 				width: 70px;
@@ -61,7 +62,6 @@
 	}
 	.content-section {
 		display: flex;
-		// align-items: flex-start;
 		@media (max-width: $desktop-small-width) {
 			align-items: unset;
 			flex-direction: column;
@@ -83,43 +83,38 @@
 				}
 			}
 		}
-		.wwyw-image-wrapper {
+		.images-wrapper {
 			flex-basis: 50%;
 			display: flex;
-			.wwywe-image {
-				width: 400px;
-				height: 400px;
+			.phone-main-wrapper {
 				position: relative;
-				background-image: url(../images/WWYWE.png);
-				background-position: center;
-				background-size: cover;
-				border: 20px solid white;
-				box-shadow: 0 3px 6px rgba(0,0,0,0.16);
-				opacity: 0;
-				transition: transform 0.5s, opacity 0.5s;
-				transform: rotate(35deg) scale(1.5);
-				&.visible {
-					transform: rotate(-15deg) scale(1);
-					opacity: 1;
-				}
-			}
-			.wwywl-image {
-				width: 400px;
-				height: 400px;
-				position: relative;
-				background-image: url(../images/WWYWL.png);
-				background-position: center;
-				background-size: cover;
-				border: 20px solid white;
-				box-shadow: 0 3px 6px rgba(0,0,0,0.16);
-				opacity: 0;
-				margin-left: -100px;
-				transition: transform 0.5s, opacity 0.5s;
-				transition-delay: 0.2s;
-				transform: rotate(35deg) scale(1.5);
-				&.visible {
-					transform: rotate(15deg) scale(1);
-					opacity: 1;
+				.phone-frame {
+					box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+					width: 375px;
+					height: 712px;
+					border-radius: 30px;
+					border: solid black 10px;
+					overflow: hidden;
+					transform-style: preserve-3d;
+					@media (max-width: $mobile-large-width) {
+						transform: unset !important;
+					}
+					.phone-notch {
+						width: 50%;
+						height: 20px;
+						margin: 0 auto;
+						border-radius: 0 0 10px 10px;
+						background: black;
+						position: relative;
+						z-index: 1;
+					}
+					.phone-content {
+						width: 100%;
+						height: 2400px;
+						background-image: url("../images/luxtripper/quote.png");
+						background-position: center;
+						background-size: cover;
+					}
 				}
 			}
 		}
