@@ -80,7 +80,7 @@ function App() {
 
 	useEffect(() => {
 		window.scrollTo(0,0);
-	}, []);
+	}, [isLoading]);
 	return (
 		<div className={`app${isLoading ? " scroll-locked" : ""}`} style={{ "--border-width": `${borderWidth}px` }}>
 			<div className="loading-screen">
