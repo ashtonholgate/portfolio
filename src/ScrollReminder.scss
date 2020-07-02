@@ -26,8 +26,9 @@
 		animation-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
 	}
 	@media (max-width: $mobile-large-width) {
+		position: fixed;
 		left: calc(50% - 50px);
-		bottom: calc(20vh + 120px);
+		bottom: calc(20vh + 220px);
 	}
 }
 
