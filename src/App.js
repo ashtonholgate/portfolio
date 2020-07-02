@@ -77,6 +77,10 @@ function App() {
 		setWindowHeight(window.innerHeight);
 		setWindowWidth(window.innerWidth);
 	}, []);
+
+	useEffect(() => {
+		window.scrollTo(0,0);
+	}, []);
 	return (
 		<div className={`app${isLoading ? " scroll-locked" : ""}`} style={{ "--border-width": `${borderWidth}px` }}>
 			<div className="loading-screen">

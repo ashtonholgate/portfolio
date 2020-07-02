@@ -12,8 +12,6 @@ export function IntroSection(props) {
 		windowWidth
 	} = props;
 
-	console.log(scrollPosition, windowHeight, scrollPosition < windowHeight);
-
 	const slideUpWrapperTransformUnset = `translate3d(0px, 0px, 0px)`;
 	const slideUpWrapperTransformDesktop = scrollPosition < windowHeight ? slideUpWrapperTransformUnset : `translate3d(0px, -${(scrollPosition - windowHeight) / 2}px, 0px)`;
 
