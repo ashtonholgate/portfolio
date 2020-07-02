@@ -143,6 +143,15 @@
 						@media (max-width: $mobile-large-width) {
 							line-height: unset;
 						}
+						&.first {
+							transition-delay: 0s;
+						}
+						&.second {
+							transition-delay: 0.5s;
+						}
+						&.third {
+							transition-delay: 0.7s;
+						}
 						&.dot {
 							color: var(--primary-color);
 							&.visible {

@@ -5,6 +5,7 @@ import { IntroSection } from './sections/IntroSection';
 import { AboutMeSection } from './sections/AboutMeSection';
 import { ProjectsSection } from './sections/ProjectsSection';
 import { ExperienceSection } from './sections/ExperienceSection';
+import { FooterSection } from './sections/FooterSection';
 
 function App() {
 	const [isLoading, setIsLoading] = useState(true);
@@ -50,7 +51,7 @@ function App() {
 	}, []);
 
 	useEffect(() => {
-		window.addEventListener('scroll', debounce(handleScroll, 5), { passive: true });
+		window.addEventListener('scroll', debounce(handleScroll, 0), { passive: true });
 		window.addEventListener('resize', handleResize, { passive: true });
 		return () => {
 			window.removeEventListener('scroll', handleScroll);
@@ -113,6 +114,12 @@ function App() {
 						windowWidth={windowWidth}
 					/>
 					<ProjectsSection
+						scrollPosition={scrollPosition}
+						borderWidth={borderWidth}
+						windowHeight={windowHeight}
+						windowWidth={windowWidth}
+					/>
+					<FooterSection
 						scrollPosition={scrollPosition}
 						borderWidth={borderWidth}
 						windowHeight={windowHeight}

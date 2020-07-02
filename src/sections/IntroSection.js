@@ -23,7 +23,7 @@ export function IntroSection(props) {
 					transform: windowWidth > 500 ? slideUpWrapperTransformDesktop : slideUpWrapperTransformUnset
 				}}
 			>
-				<div className={`slide-right-wrapper${isLoading ? " init" : ""}${scrollPosition !== 0 ? " shifted" : ""}`}>
+				<div className={`slide-right-wrapper${isLoading ? " init" : ""}${scrollPosition > 0 ? " shifted" : ""}`}>
 					<div className={`intro-text-main-wrapper${scrollPosition !== 0 ? " visible" : ""}`}
 						style={{
 							top: scrollPosition < windowHeight ? "0px" : `${(scrollPosition - windowHeight) / 3}px`
@@ -42,13 +42,13 @@ export function IntroSection(props) {
 					<div className="left" />
 					<div className="title-text-main-wrapper">
 						<div className="title-text-wrapper">
-							<p className={`title-text ${titleTextIsVisible ? "visible" : ""}`} style={{ transitionDelay: "0s" }}>Hi,</p>
+							<p className={`title-text first${titleTextIsVisible ? " visible" : ""}`}>Hi,</p>
 						</div>
 						<div className="title-text-wrapper">
-							<p className={`title-text ${titleTextIsVisible ? "visible" : ""}`} style={{ transitionDelay: "0.5s" }}>I'm</p>
+							<p className={`title-text second${titleTextIsVisible ? " visible" : ""}`}>I'm</p>
 						</div>
 						<div className="title-text-wrapper">
-							<p className={`title-text ${titleTextIsVisible ? "visible" : ""}`} style={{ transitionDelay: "0.7s" }}>
+							<p className={`title-text third${titleTextIsVisible ? " visible" : ""}`}>
 								Ashton<span className={`title-text dot ${titleTextIsVisible ? "visible" : ""}`}>.</span>
 							</p>
 						</div>
