@@ -82,7 +82,10 @@ function App() {
 			<div className="loading-screen">
 				<LoadingIcon />
 			</div>
-			<div className={`white-border${isLoading ? "" : " visible"}`} />
+			<div className={`white-border left${isLoading ? "" : " visible"}`} />
+			<div className={`white-border top${isLoading ? "" : " visible"}`} />
+			<div className={`white-border right${isLoading ? "" : " visible"}`} />
+			<div className={`white-border bottom${isLoading ? "" : " visible"}`} />
 			<>
 				<IntroSection
 					isLoading={isLoading}
