@@ -34,44 +34,41 @@
 	position: fixed;
 	background: var(--readable-secondary-color);
 	transition: transform 0.4s;
+	transform: translate3d(0px, 0px, 0px);
 		&.left {
 		top: 0;
-		left: 0;
+		left: calc(var(--border-width) - calc(var(--border-width) * 2));
 		width: var(--border-width);
 		height: 100vh;
-		transform: translateX(calc(var(--border-width) - calc(var(--border-width) * 2)));
 		&.visible {
-			transform: translateX(0px);
+			transform: translate3d(var(--border-width), 0px, 0px);
 		}
 	}
 	&.right {
 		top: 0;
-		right: 0;
+		right: calc(var(--border-width) - calc(var(--border-width) * 2));
 		width: var(--border-width);
 		height: 100vh;
-		transform: translateX(var(--border-width));
 		&.visible {
-			transform: translateX(0px);
+			transform: translate3d(calc(var(--border-width) - calc(var(--border-width) * 2)), 0px, 0px);
 		}
 	}
 	&.top {
-		top: 0;
+		top: calc(var(--border-width) - calc(var(--border-width) * 2));
 		left: 0;
 		width: 100vw;
 		height: var(--border-width);
-		transform: translateY(calc(var(--border-width) - calc(var(--border-width) * 2)));
 		&.visible {
-			transform: translateY(0px);
+			transform: translate3d(0px, var(--border-width), 0px);
 		}
 	}
 	&.bottom {
-		bottom: 0;
+		bottom: calc(var(--border-width) - calc(var(--border-width) * 2));
 		left: 0;
 		width: 100vw;
 		height: var(--border-width);
-		transform: translateY(var(--border-width));
 		&.visible {
-			transform: translateY(0px);
+			transform: translate3d(0px, calc(var(--border-width) - calc(var(--border-width) * 2)), 0px);
 		}
 	}
 }
