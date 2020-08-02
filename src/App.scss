@@ -35,7 +35,7 @@
 	background: var(--readable-secondary-color);
 	transition: transform 0.4s;
 	transform: translate3d(0px, 0px, 0px);
-		&.left {
+	&.left {
 		top: 0;
 		left: calc(var(--border-width) - calc(var(--border-width) * 2));
 		width: var(--border-width);

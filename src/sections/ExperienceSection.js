@@ -1,13 +1,15 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { Zigzag } from '../styling/Zigzag';
 import './ExperienceSection.scss';
+import moment from 'moment';
 
 export function ExperienceSection(props) {
 	const { scrollPosition, windowHeight, borderWidth } = props;
 	const [titleTextIsVisible, setTitleTextIsVisible] = useState(false);
 	const titleTextVisibilityMarker = useRef(null);
 	const ImageVisibilityMarker = useRef(null);
-	const [ImageOffset, setImageOffset] = useState(0);
+	const [ImageOffset, setImageOffset] = useState(
+		0);
 
 	useEffect(() => {
 		if (!titleTextIsVisible) {
@@ -15,11 +17,15 @@ export function ExperienceSection(props) {
 				titleTextVisibilityMarker.current.getBoundingClientRect().bottom - windowHeight - borderWidth < 0);
 		}
 		const top = ImageVisibilityMarker.current.getBoundingClientRect().top;
-		const height = ImageVisibilityMarker.current.getBoundingClientRect().height;
 		setImageOffset(
 			(top - windowHeight - borderWidth) / 2
 		);
 	}, [scrollPosition, windowHeight, borderWidth, titleTextIsVisible, ImageOffset]);
+
+	const luxtripperStartDate = moment([2017, 9]);
+	const luxtripperEndDate = moment();
+	const luxtripperYears = luxtripperEndDate.diff(luxtripperStartDate, 'years');
+	const luxtripperMonths = luxtripperEndDate.diff(luxtripperStartDate, 'months') % 12;
 
 	return (
 		<div className="experience-section">
@@ -36,10 +42,15 @@ export function ExperienceSection(props) {
 			</div>
 			<div className="content-section">
 				<div className="text-section">
-					<a className="link" href="//www.whenwillyou.win" target="_blank" rel="noopener noreferrer">
-						Luxtripper
+					<a className="title-section" href="//www.luxtripper.co.uk" target="_blank" rel="noopener noreferrer">
+						<p className="title">
+							Luxtripper
+						</p>
+						<p className="sub-title">Front End Developer &amp; Lead UI Designer</p>
+						<p className="post-title">
+							Oct 2017 - Present • {luxtripperYears} Years, {luxtripperMonths} Months
+						</p>
 					</a>
-					<p>Front End Developer &amp; Lead UI Designer</p>
 					<p className="text">
 						Built in <b>React</b>, using <b>Redux</b> and <b>Typescript</b>.
 					</p>
