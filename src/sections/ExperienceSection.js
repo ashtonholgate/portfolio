@@ -52,22 +52,22 @@ export function ExperienceSection(props) {
 						</p>
 					</a>
 					<p className="text">
-						Built in <b>React</b>, using <b>Redux</b> and <b>Typescript</b>.
+						At Luxtripper I build <b>Web-Apps</b> in <b>React</b>, using <b>Typescript</b>, but not before designing them first in <b>Adobe XD</b> or <b>Balsamiq</b>.
 					</p>
 					<p className="text">
-						First choose which lottery you'd like to simulate, either the UK Lotto or Euromillions, then pick your numbers and begin! The simulator will run accurate simulations as fast as your device will allow until you are
-						lucky enough to hit the jackpot. When will you win?
+						I have designed and built the following apps:
 					</p>
-					<p className="text">
-						Project designed in <b>Adobe XD</b> using a mobile first approach, desktop layout informed by mobile design. Used animations between state transitions as a tool to communicate the flow of information, thus making the program
-					more intuitive to use.
-					</p>
+					<ul className="text">
+						<li>Multiple CRMs with integrated quote builders (for various projects)</li>
+						<li>Customer surfaced quote (seen pictured adjacently)</li>
+						<li>Automated contract pricing calculator</li>
+					</ul>
 				</div>
 				<div ref={ImageVisibilityMarker} className="images-wrapper">
 					<div className="phone-main-wrapper">
 						<div className="phone-frame" style={{ transform: `translateY(${ImageOffset / 2}px) rotateX(${ImageOffset / 50}deg) rotateY(${ImageOffset / 50}deg) rotateZ(${ImageOffset / 50}deg)` }}>
 							<div className="phone-notch" />
-							<div className="phone-content" style={{ transform: `translateY(${ImageOffset * 2}px)` }} />
+							<img className="phone-content" src={require("../images/luxtripper/quote.png")} alt="Luxtripper iPhone" style={{ transform: `translateY(${ImageOffset * 2}px)` }} />
 						</div>
 					</div>
 				</div>

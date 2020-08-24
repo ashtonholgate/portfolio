@@ -67,8 +67,17 @@
 						transition: 0.6s;
 						transition-delay: 0.2s;
 						will-change: transform, opacity;
+						@media (max-width: $desktop-small-width) {
+							font-size: 7.5em;
+						}
+						@media (max-width: $tablet-large-width) {
+							font-size: 6em;
+						}
 						@media (max-width: $tablet-medium-width) {
 							font-size: 22px;
+						}
+						@media (max-width: $tablet-small-width) {
+							font-size: 5em;
 						}
 						@media (max-width: $mobile-large-width) {
 							font-size: 16px;
@@ -111,24 +120,23 @@
 				transform: translate(-45%);
 				.title-text-wrapper {
 					width: 100%;
-					font-size: 144px;
+					font-size: 9em;
 					overflow: hidden;
+					@media (max-width: $desktop-small-width) {
+						font-size: 7.5em;
+					}
 					@media (max-width: $tablet-large-width) {
-						font-size: 92px;
-						height: 90px;
+						font-size: 6em;
 					}
 					@media (max-width: $tablet-small-width) {
-						font-size: 82px;
-						height: 90px;
+						font-size: 5em;
 					}
 					@media (max-width: $mobile-large-width) {
-						height: 76px;
-						font-size: 64px;
+						font-size: 4em;
 						transform: translateY(-150px);
 					}
 					.title-text {
-						height: 140px;
-						line-height: 100px;
+						line-height: 1em;
 						color: var(--readable-color);
 						letter-spacing: -2px;
 						font-weight: 800;

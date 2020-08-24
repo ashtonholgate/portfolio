@@ -35,19 +35,22 @@ export function ProjectsSection(props) {
 			</div>
 			<div className="content-section">
 				<div className="text-section">
-					<a className="link" href="//www.whenwillyou.win" target="_blank" rel="noopener noreferrer">
-						WhenWillYou.Win
+					<a className="title-section" href="//www.whenwillyou.win" target="_blank" rel="noopener noreferrer">
+						<p className="title">
+							WhenWillYou.Win
+						</p>
+						<p className="sub-title">Lottery Simulator</p>
+
 					</a>
-					<p>Lottery Simulator</p>
 					<p className="text">
-					Built in <b>React</b>, using <b>Redux</b> and <b>Typescript</b>.
+						Built in <b>React</b>, using <b>Redux</b> and <b>Typescript</b>.
 					</p>
 					<p className="text">
-					First choose which lottery you'd like to simulate, either the UK Lotto or Euromillions, then pick your numbers and begin! The simulator will run accurate simulations as fast as your device will allow until you are 
-					lucky enough to hit the jackpot. When will you win?
+						First choose which lottery you'd like to simulate, either the UK Lotto or Euromillions, then pick your numbers and begin! The simulator will run accurate simulations as fast as your device will allow until you are
+						lucky enough to hit the jackpot. When will you win?
 					</p>
 					<p className="text">
-					Project designed in <b>Adobe XD</b> using a mobile first approach, desktop layout informed by mobile design. Used animations between state transitions as a tool to communicate the flow of information, thus making the program 
+						Project designed in <b>Adobe XD</b> using a mobile first approach, desktop layout informed by mobile design. Used animations between state transitions as a tool to communicate the flow of information, thus making the program
 					more intuitive to use.
 					</p>
 				</div>

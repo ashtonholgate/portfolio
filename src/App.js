@@ -80,7 +80,7 @@ function App() {
 	}, []);
 
 	useEffect(() => {
-		window.scrollTo(0,0);
+		window.scrollTo(0, 0);
 	}, [isLoading]);
 	return (
 		<div className={`app${isLoading ? " scroll-locked" : ""}`} style={{ "--border-width": `${borderWidth}px` }}>
@@ -91,42 +91,38 @@ function App() {
 			<div className={`white-border top${isLoading ? "" : " visible"}`} />
 			<div className={`white-border right${isLoading ? "" : " visible"}`} />
 			<div className={`white-border bottom${isLoading ? "" : " visible"}`} />
-			<>
-				<IntroSection
-					isLoading={isLoading}
-					initializationIsComplete={initializationIsComplete}
-					titleTextIsVisible={titleTextIsVisible}
-					scrollPosition={scrollPosition}
-					windowHeight={windowHeight}
-					windowWidth={windowWidth}
-				/>
-				<>
-					<AboutMeSection
+			<IntroSection
+				isLoading={isLoading}
+				initializationIsComplete={initializationIsComplete}
+				titleTextIsVisible={titleTextIsVisible}
+				scrollPosition={scrollPosition}
+				windowHeight={windowHeight}
+				windowWidth={windowWidth}
+			/>
+			<AboutMeSection
+				scrollPosition={scrollPosition}
+				borderWidth={borderWidth}
+				windowHeight={windowHeight}
+				windowWidth={windowWidth}
+			/>
+			<ExperienceSection
+				scrollPosition={scrollPosition}
+				borderWidth={borderWidth}
+				windowHeight={windowHeight}
+				windowWidth={windowWidth}
+			/>
+			<ProjectsSection
+				scrollPosition={scrollPosition}
+				borderWidth={borderWidth}
+				windowHeight={windowHeight}
+				windowWidth={windowWidth}
+			/>
+			{/* <FooterSection
 						scrollPosition={scrollPosition}
 						borderWidth={borderWidth}
 						windowHeight={windowHeight}
 						windowWidth={windowWidth}
-					/>
-					<ExperienceSection
-						scrollPosition={scrollPosition}
-						borderWidth={borderWidth}
-						windowHeight={windowHeight}
-						windowWidth={windowWidth}
-					/>
-					<ProjectsSection
-						scrollPosition={scrollPosition}
-						borderWidth={borderWidth}
-						windowHeight={windowHeight}
-						windowWidth={windowWidth}
-					/>
-					<FooterSection
-						scrollPosition={scrollPosition}
-						borderWidth={borderWidth}
-						windowHeight={windowHeight}
-						windowWidth={windowWidth}
-					/>
-				</>
-			</>
+			/> */}
 		</div>
 	);
 }

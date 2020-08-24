@@ -146,6 +146,11 @@
 					border: solid black 10px;
 					overflow: hidden;
 					transform-style: preserve-3d;
+					@media (max-width: $tablet-large-width) {
+						width: calc(375px / 2);
+						height: calc(712px / 2);
+					}
+					transform-style: preserve-3d;
 					@media (max-width: $mobile-large-width) {
 						transform: unset !important;
 					}
@@ -160,10 +165,10 @@
 					}
 					.phone-content {
 						width: 100%;
-						height: 2400px;
-						background-image: url("../images/luxtripper/quote.png");
-						background-position: center;
-						background-size: cover;
+						// height: 2400px;
+						// background-image: url("../images/luxtripper/quote.png");
+						// background-position: center;
+						// background-size: cover;
 					}
 				}
 			}
