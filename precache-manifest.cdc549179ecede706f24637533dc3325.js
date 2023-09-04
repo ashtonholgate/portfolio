@@ -1,27 +1,31 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "454da21ecebcda2414dc61729c1e7e70",
+    "revision": "eb66f72a7bf980491b6297e510378d8d",
     "url": "/portfolio2020/index.html"
   },
   {
-    "revision": "28bf58e1df375d9382b5",
-    "url": "/portfolio2020/static/css/main.27efb17e.chunk.css"
+    "revision": "6fb8172c0c788d27764f",
+    "url": "/portfolio2020/static/css/main.04dcae05.chunk.css"
   },
   {
-    "revision": "be3df187ce399543976d",
-    "url": "/portfolio2020/static/js/2.c66d7165.chunk.js"
+    "revision": "414a68327e16dcae93d4",
+    "url": "/portfolio2020/static/js/2.87f0a87f.chunk.js"
   },
   {
     "revision": "e88a3e95b5364d46e95b35ae8c0dc27d",
-    "url": "/portfolio2020/static/js/2.c66d7165.chunk.js.LICENSE.txt"
+    "url": "/portfolio2020/static/js/2.87f0a87f.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "28bf58e1df375d9382b5",
-    "url": "/portfolio2020/static/js/main.8f575665.chunk.js"
+    "revision": "6fb8172c0c788d27764f",
+    "url": "/portfolio2020/static/js/main.df3e022e.chunk.js"
   },
   {
     "revision": "2f2f9552a859c52bd04e",
     "url": "/portfolio2020/static/js/runtime-main.626836e7.js"
+  },
+  {
+    "revision": "fee29ca8af3c0308897cbfb18234a490",
+    "url": "/portfolio2020/static/media/Ashton Holgate - CV.fee29ca8.pdf"
   },
   {
     "revision": "9700a6f6bbba7bc14e382e458270c448",
