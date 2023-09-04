@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/www.ashtonholgate.com/static/css/main.72d3b6d2.chunk.css",
-    "main.js": "/www.ashtonholgate.com/static/js/main.ca98da3f.chunk.js",
-    "main.js.map": "/www.ashtonholgate.com/static/js/main.ca98da3f.chunk.js.map",
-    "runtime-main.js": "/www.ashtonholgate.com/static/js/runtime-main.de6d021e.js",
-    "runtime-main.js.map": "/www.ashtonholgate.com/static/js/runtime-main.de6d021e.js.map",
-    "static/js/2.4c8ab363.chunk.js": "/www.ashtonholgate.com/static/js/2.4c8ab363.chunk.js",
-    "static/js/2.4c8ab363.chunk.js.map": "/www.ashtonholgate.com/static/js/2.4c8ab363.chunk.js.map",
-    "index.html": "/www.ashtonholgate.com/index.html",
-    "precache-manifest.0040c4490c099165473f49bafe0a393b.js": "/www.ashtonholgate.com/precache-manifest.0040c4490c099165473f49bafe0a393b.js",
-    "service-worker.js": "/www.ashtonholgate.com/service-worker.js",
-    "static/css/main.72d3b6d2.chunk.css.map": "/www.ashtonholgate.com/static/css/main.72d3b6d2.chunk.css.map",
-    "static/js/2.4c8ab363.chunk.js.LICENSE.txt": "/www.ashtonholgate.com/static/js/2.4c8ab363.chunk.js.LICENSE.txt",
-    "static/media/Ashton Holgate - CV.pdf": "/www.ashtonholgate.com/static/media/Ashton Holgate - CV.fee29ca8.pdf",
-    "static/media/ProjectsSection.scss": "/www.ashtonholgate.com/static/media/WWYWL.ce9ccdcf.png",
-    "static/media/quote.png": "/www.ashtonholgate.com/static/media/quote.9039dd91.png"
+    "main.css": "/portfolio/static/css/main.d83b5976.chunk.css",
+    "main.js": "/portfolio/static/js/main.bdac1189.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.bdac1189.chunk.js.map",
+    "runtime-main.js": "/portfolio/static/js/runtime-main.fb1b3dac.js",
+    "runtime-main.js.map": "/portfolio/static/js/runtime-main.fb1b3dac.js.map",
+    "static/js/2.4c8ab363.chunk.js": "/portfolio/static/js/2.4c8ab363.chunk.js",
+    "static/js/2.4c8ab363.chunk.js.map": "/portfolio/static/js/2.4c8ab363.chunk.js.map",
+    "index.html": "/portfolio/index.html",
+    "precache-manifest.825cfeadac04f35d4e2d28649f715403.js": "/portfolio/precache-manifest.825cfeadac04f35d4e2d28649f715403.js",
+    "service-worker.js": "/portfolio/service-worker.js",
+    "static/css/main.d83b5976.chunk.css.map": "/portfolio/static/css/main.d83b5976.chunk.css.map",
+    "static/js/2.4c8ab363.chunk.js.LICENSE.txt": "/portfolio/static/js/2.4c8ab363.chunk.js.LICENSE.txt",
+    "static/media/Ashton Holgate - CV.pdf": "/portfolio/static/media/Ashton Holgate - CV.fee29ca8.pdf",
+    "static/media/ProjectsSection.scss": "/portfolio/static/media/WWYWL.ce9ccdcf.png",
+    "static/media/quote.png": "/portfolio/static/media/quote.9039dd91.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.de6d021e.js",
+    "static/js/runtime-main.fb1b3dac.js",
     "static/js/2.4c8ab363.chunk.js",
-    "static/css/main.72d3b6d2.chunk.css",
-    "static/js/main.ca98da3f.chunk.js"
+    "static/css/main.d83b5976.chunk.css",
+    "static/js/main.bdac1189.chunk.js"
   ]
 }
