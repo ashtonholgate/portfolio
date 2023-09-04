@@ -1,5 +1,6 @@
 import React from 'react';
 import { ScrollReminder } from '../ScrollReminder';
+import pdf from "../pdfs/Ashton Holgate - CV.pdf";
 import './IntroSection.scss';
 
 export function IntroSection(props) {
@@ -19,8 +20,8 @@ export function IntroSection(props) {
 		<div className="intro-section">
 			<div className="slide-up-wrapper"
 				style={{
-					position: windowWidth > 500 ? "fixed" : "",
-					transform: windowWidth > 500 ? slideUpWrapperTransformDesktop : slideUpWrapperTransformUnset
+					position: windowWidth > 768 ? "fixed" : "",
+					transform: windowWidth > 768 ? slideUpWrapperTransformDesktop : slideUpWrapperTransformUnset
 				}}
 			>
 				<div className={`slide-right-wrapper${isLoading ? " init" : ""}${scrollPosition > 0 ? " shifted" : ""}`}>
@@ -30,13 +31,16 @@ export function IntroSection(props) {
 						}}
 					>
 						<div className="intro-text-wrapper">
-							<p className={`intro-text main${scrollPosition !== 0 ? " first visible" : ""}`}>I'm a Front-End Web Developer</p>
+							<p className={`intro-text main${scrollPosition !== 0 ? " first visible" : ""}`}>I'm a Full Stack Web Developer</p>
 						</div>
 						<div className="intro-text-wrapper">
 							<p className={`intro-text sub${scrollPosition !== 0 ? " second visible" : ""}`}>with a passion for building</p>
 						</div>
 						<div className="intro-text-wrapper">
 							<p className={`intro-text sub${scrollPosition !== 0 ? " third visible" : ""}`}>beautiful, functional, web apps.</p>
+						</div>
+						<div className="intro-button-wrapper">
+							<a href={pdf} target="__blank" className={`hero-button ${scrollPosition !== 0 ? " visible" : ""}`}>Download CV</a>
 						</div>
 					</div>
 					<div className="left" />

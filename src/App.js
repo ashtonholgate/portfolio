@@ -37,10 +37,8 @@ function App() {
 	const handleResize = () => {
 		setWindowWidth(window.innerWidth);
 		setWindowHeight(window.innerHeight);
-		if (window.innerWidth <= 500) {
+		if (window.innerWidth <= 768) {
 			setBorderWidth(0);
-		} else if (window.innerWidth <= 768) {
-			setBorderWidth(40);
 		} else {
 			setBorderWidth(50);
 		}

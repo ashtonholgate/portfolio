@@ -98,6 +98,9 @@
 					font-size: 3.5em;
 					font-weight: 700;
 					transition: 0.2s;
+					@media (max-width: $tablet-large-width) {
+						font-size: 1.6em;
+					}
 				}
 				.sub-title {
 					margin: 0;
@@ -122,6 +125,9 @@
 		.wwyw-image-wrapper {
 			flex-basis: 50%;
 			display: flex;
+			@media (max-width: $desktop-small-width) {
+				display: none;
+			}
 			.wwywe-image {
 				width: 400px;
 				height: 400px;

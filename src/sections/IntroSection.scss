@@ -1,9 +1,26 @@
 @import "../variables.scss";
 
+@keyframes buttonBeforeDivHoverSlideIn {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(100%);
+	}
+}
+@keyframes buttonBeforeDivHoverSlideOut {
+	0% {
+		transform: translateX(100%);
+	}
+	100% {
+		transform: translateX(200%);
+	}
+}
+
 .intro-section {
 	min-height: 200vh;
 	user-select: none;
-	@media (max-width: $mobile-large-width) {
+	@media (max-width: $tablet-medium-width) {
 		min-height: calc(100vh + 200px);
 	}
 	.slide-up-wrapper {
@@ -17,7 +34,7 @@
 			transition: transform 0.8s;
 			transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
 			transform: translate3d(0px, 0px, 0px);
-			@media (max-width: $mobile-large-width) {
+			@media (max-width: $tablet-medium-width) {
 				height: calc(100vh + 200px);
 				top: 0px !important;
 			}
@@ -40,20 +57,20 @@
 				@media (max-width: $desktop-medium-width) {
 					transform: translateX(-65%);
 				}
-				@media (max-width: $mobile-large-width) {
+				@media (max-width: $tablet-medium-width) {
 					width: 80vw;
 					height: 200px;
-					top: 100vh !important;
+					top: 90vh !important;
 				}
 				@media (max-width: $mobile-medium-width) {
 					width: 80vw;
 					height: 200px;
-					top: 100vh !important;
+					top: 90vh !important;
 				}
 				@media (max-width: $mobile-small-width) {
 					width: 80vw;
 					height: 200px;
-					top: 100vh !important;
+					top: 90vh !important;
 				}
 				.intro-text-wrapper {
 					width: 80%;
@@ -68,18 +85,9 @@
 						transition-delay: 0.2s;
 						will-change: transform, opacity;
 						@media (max-width: $desktop-small-width) {
-							font-size: 7.5em;
-						}
-						@media (max-width: $tablet-large-width) {
-							font-size: 6em;
+							font-size: 20px;
 						}
 						@media (max-width: $tablet-medium-width) {
-							font-size: 22px;
-						}
-						@media (max-width: $tablet-small-width) {
-							font-size: 5em;
-						}
-						@media (max-width: $mobile-large-width) {
 							font-size: 16px;
 						}
 						&.sub {
@@ -90,13 +98,78 @@
 							transition-delay: 0.2s;
 						}
 						&.second {
-							transition-delay: 0.5s;
+							transition-delay: 0.7s;
 						}
 						&.third {
-							transition-delay: 0.6s;
+							transition-delay: 0.9s;
 						}
 						&.visible {
 							opacity: 1;
+							transform: translateY(0%);
+						}
+					}
+				}
+				.intro-button-wrapper {
+					width: 80%;
+					overflow: hidden;
+					margin-top: 20px;
+					.hero-button {
+						box-sizing: border-box;
+						color: white;
+						text-decoration: none;
+						font-weight: 700;
+						border: 4px solid white;
+						width: 100%;
+						height: 55px;
+						padding: 0;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						font-size: 1.4em;
+						overflow: hidden;
+						position: relative;
+						animation-delay: 2.75s;
+						opacity: 0;
+						transform: translateY(200%);
+						transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out, transform 0.6s 0.2s, opacity 0.6s 0.2s;
+						will-change: transform, opacity;
+						cursor: pointer;
+						@media(min-width: $mobile-medium-width) {
+							font-size: 1.8em;
+							height: 60px;
+							border: 5px solid white;
+						}
+						@media(min-width: $desktop-medium-width) {
+							width: 325px;
+							font-size: 2.4em;
+							border: 6px solid white;
+							height: 100px;
+						}
+						@media(min-width: $desktop-large-width) {
+							width: 425px;
+							font-size: 2.8em;
+						}
+						&:before {
+							content: "";
+							position: absolute;
+							height: 100%;
+							width: 100%;
+							top: 0;
+							left: -100%;
+							transform-origin: top right;
+							z-index: -1;
+							background: white;
+							animation: buttonBeforeDivHoverSlideOut 0.3s forwards;
+						}
+						&:hover {
+							color: var(--primary-color);
+						}
+						&:hover:before {
+							animation: buttonBeforeDivHoverSlideIn 0.3s forwards;
+						}
+						&.visible {
+							opacity: 1;
+							transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out, transform 0.6s 1.3s, opacity 0.6s 1.3s;
 							transform: translateY(0%);
 						}
 					}
@@ -126,10 +199,7 @@
 						font-size: 7.5em;
 					}
 					@media (max-width: $tablet-large-width) {
-						font-size: 6em;
-					}
-					@media (max-width: $tablet-small-width) {
-						font-size: 5em;
+						font-size: 4em;
 					}
 					@media (max-width: $mobile-large-width) {
 						font-size: 4em;
