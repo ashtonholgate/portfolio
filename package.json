@@ -1,6 +1,6 @@
 {
-	"homepage": "http://ashholgate.github.io/portfolio2020",
-	"name": "portfolio2020",
+	"homepage": "http://ashholgate.github.io/portfolio",
+	"name": "portfolio",
 	"version": "0.1.0",
 	"private": true,
 	"dependencies": {
