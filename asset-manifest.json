@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/portfolio-2023/static/css/main.47132c81.chunk.css",
-    "main.js": "/portfolio-2023/static/js/main.b9afcffc.chunk.js",
-    "main.js.map": "/portfolio-2023/static/js/main.b9afcffc.chunk.js.map",
-    "runtime-main.js": "/portfolio-2023/static/js/runtime-main.a93dc092.js",
-    "runtime-main.js.map": "/portfolio-2023/static/js/runtime-main.a93dc092.js.map",
-    "static/js/2.d560bb7b.chunk.js": "/portfolio-2023/static/js/2.d560bb7b.chunk.js",
-    "static/js/2.d560bb7b.chunk.js.map": "/portfolio-2023/static/js/2.d560bb7b.chunk.js.map",
-    "index.html": "/portfolio-2023/index.html",
-    "precache-manifest.2101f5c6d2a95423b764da048c2b9f19.js": "/portfolio-2023/precache-manifest.2101f5c6d2a95423b764da048c2b9f19.js",
-    "service-worker.js": "/portfolio-2023/service-worker.js",
-    "static/css/main.47132c81.chunk.css.map": "/portfolio-2023/static/css/main.47132c81.chunk.css.map",
-    "static/js/2.d560bb7b.chunk.js.LICENSE.txt": "/portfolio-2023/static/js/2.d560bb7b.chunk.js.LICENSE.txt",
-    "static/media/Ashton Holgate - CV.pdf": "/portfolio-2023/static/media/Ashton Holgate - CV.fee29ca8.pdf",
-    "static/media/ProjectsSection.scss": "/portfolio-2023/static/media/WWYWL.ce9ccdcf.png",
-    "static/media/quote.png": "/portfolio-2023/static/media/quote.9039dd91.png"
+    "main.css": "/static/css/main.6493e75a.chunk.css",
+    "main.js": "/static/js/main.7014139e.chunk.js",
+    "main.js.map": "/static/js/main.7014139e.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.1622b3f2.js",
+    "runtime-main.js.map": "/static/js/runtime-main.1622b3f2.js.map",
+    "static/js/2.d560bb7b.chunk.js": "/static/js/2.d560bb7b.chunk.js",
+    "static/js/2.d560bb7b.chunk.js.map": "/static/js/2.d560bb7b.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.504704b20f7e91b4374f72f27884c1c6.js": "/precache-manifest.504704b20f7e91b4374f72f27884c1c6.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.6493e75a.chunk.css.map": "/static/css/main.6493e75a.chunk.css.map",
+    "static/js/2.d560bb7b.chunk.js.LICENSE.txt": "/static/js/2.d560bb7b.chunk.js.LICENSE.txt",
+    "static/media/Ashton Holgate - CV.pdf": "/static/media/Ashton Holgate - CV.fee29ca8.pdf",
+    "static/media/ProjectsSection.scss": "/static/media/WWYWL.ce9ccdcf.png",
+    "static/media/quote.png": "/static/media/quote.9039dd91.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.a93dc092.js",
+    "static/js/runtime-main.1622b3f2.js",
     "static/js/2.d560bb7b.chunk.js",
-    "static/css/main.47132c81.chunk.css",
-    "static/js/main.b9afcffc.chunk.js"
+    "static/css/main.6493e75a.chunk.css",
+    "static/js/main.7014139e.chunk.js"
   ]
 }
