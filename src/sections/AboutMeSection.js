@@ -19,8 +19,6 @@ export function AboutMeSection(props) {
           0
       );
     }
-    const bottom =
-      skillsSectionVisibilityMarker.current.getBoundingClientRect().bottom;
     const height =
       skillsSectionVisibilityMarker.current.getBoundingClientRect().height;
     setSkillsSectionOffset(

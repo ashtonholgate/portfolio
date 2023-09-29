@@ -5,7 +5,6 @@ import { IntroSection } from './sections/IntroSection';
 import { AboutMeSection } from './sections/AboutMeSection';
 import { ProjectsSection } from './sections/ProjectsSection';
 import { ExperienceSection } from './sections/ExperienceSection';
-import { FooterSection } from './sections/FooterSection';
 
 function App() {
 	const [isLoading, setIsLoading] = useState(true);
