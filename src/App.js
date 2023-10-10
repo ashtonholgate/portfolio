@@ -15,20 +15,6 @@ function App() {
 	const [windowHeight, setWindowHeight] = useState(0);
 	const [windowWidth, setWindowWidth] = useState(0);
 
-	const debounce = (func, wait) => {
-		let timeout;
-
-		return function executedFunction(...args) {
-			const later = () => {
-				timeout = null;
-				func(...args);
-			};
-
-			clearTimeout(timeout);
-			timeout = setTimeout(later, wait);
-		};
-	};
-
 	const handleScroll = () => {
 		setScrollPosition(window.pageYOffset);
 	};
@@ -48,7 +34,7 @@ function App() {
 	}, []);
 
 	useEffect(() => {
-		window.addEventListener('scroll', debounce(handleScroll, 0), { passive: true });
+		window.addEventListener('scroll', handleScroll, { passive: true });
 		window.addEventListener('resize', handleResize, { passive: true });
 		return () => {
 			window.removeEventListener('scroll', handleScroll);

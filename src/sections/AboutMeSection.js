@@ -113,6 +113,8 @@ export function AboutMeSection(props) {
                 <p>Jest</p>
                 <p>Git</p>
                 <p>Linux</p>
+                <p>Next.js</p>
+                <p>Express.js</p>
               </div>
               <div className="skills-wrapper developer small-tablet">
                 <p>Typescript</p>
@@ -125,6 +127,8 @@ export function AboutMeSection(props) {
                 <p>Jest</p>
                 <p>Git</p>
                 <p>Linux</p>
+                <p>Next.js</p>
+                <p>Express.js</p>
               </div>
             </div>
             <div className="section-wrapper designer">
