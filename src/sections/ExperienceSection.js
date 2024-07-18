@@ -29,11 +29,13 @@ export function ExperienceSection(props) {
     ImageOffset,
   ]);
 
+  const daemonStartDate = moment([2023, 11]);
+  const daemonEndDate = moment();
+  const daemonYears = daemonEndDate.diff(daemonStartDate, "years");
+  const daemonMonths = daemonEndDate.diff(daemonStartDate, "months") % 12;
   const luxtripperStartDate = moment([2017, 9]);
-  const luxtripperEndDate = moment();
+  const luxtripperEndDate = moment([2023, 9]);
   const luxtripperYears = luxtripperEndDate.diff(luxtripperStartDate, "years");
-  const luxtripperMonths =
-    luxtripperEndDate.diff(luxtripperStartDate, "months") % 12;
 
   return (
     <div className="experience-section">
@@ -58,6 +60,47 @@ export function ExperienceSection(props) {
         <div className="text-section">
           <a
             className="title-section"
+            href="//www.dae.mn"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <p className="title">Daemon</p>
+            <p className="sub-title">Senior Consultant</p>
+            <p className="post-title">
+              December 2023 - Present •{" "}
+              {daemonYears ? `${daemonYears} Years ` : ""}
+              {daemonMonths} Months
+            </p>
+          </a>
+          <p className="text">
+            At Daemon, I am a Senior Consultant, responsible for delivering
+            projects and mentoring less experienced colleagues. Key achievements
+            include:
+          </p>
+          <ul className="text">
+            <li>
+              Designed and built a 2-dimensional floor-plan manipulator, using
+              React, Typescript, and HTML canvas, for Sainsbury’s. This system
+              allowed users to group fixtures into temperature zones, define
+              optimal paths, and supported drag-and-drop, zooming, panning, and
+              rendering complex connections.
+            </li>
+            <li>
+              Significantly contributed to the overall architecture plan for a
+              large microservice-based system for Sainsbury’s, which used Kafka
+              topics as one of its primary data sources.
+            </li>
+            <li>
+              Led the UX, UI, and general architecture of an internal AI project
+              to analyse and optimise a collection of Confluence pages.
+            </li>
+            <li>
+              Guided and mentored junior colleagues, ensuring their growth and
+              development within their roles.
+            </li>
+          </ul>
+          <a
+            className="title-section"
             href="//www.luxtripper.co.uk"
             target="_blank"
             rel="noopener noreferrer"
@@ -65,8 +108,7 @@ export function ExperienceSection(props) {
             <p className="title">Luxtripper</p>
             <p className="sub-title">Full Stack Software Developer</p>
             <p className="post-title">
-              Oct 2017 - Present • {luxtripperYears} Years, {luxtripperMonths}{" "}
-              Months
+              Oct 2017 - October 2023 • {luxtripperYears} Years
             </p>
           </a>
           <p className="text">
@@ -74,8 +116,8 @@ export function ExperienceSection(props) {
             Developer to a Full Stack Software Developer, progressively taking
             on more intricate projects and responsibilities. The technical
             stack, at a high level, is <b>React</b>, <b>Node.js</b> and{" "}
-            <b>SQL</b>, with many other supporting technologies utilized. Below are some of the
-            key projects I've helped bring to fruition:
+            <b>SQL</b>, with many other supporting technologies utilized. Below
+            are some of the key projects I've helped bring to fruition:
           </p>
           <ul className="text">
             <li>

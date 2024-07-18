@@ -1,183 +1,184 @@
 @import "../variables.scss";
 
 .experience-section {
-	padding: calc(var(--border-width) + 80px);
-	padding-right: var(--border-width);
-	position: relative;
-	background: var(--secondary-color);
-	z-index: 20;
-	display: flex;
-	flex-direction: column;
+  padding: calc(var(--border-width) + 80px);
+  padding-right: var(--border-width);
+  position: relative;
+  background: var(--secondary-color);
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
 
-	@media (max-width: $desktop-small-width) {
-		padding: var(--border-width);
-	}
-	.title-section {
-		padding-left: 15%;
-		margin-bottom: 40px;
-		@media (max-width: $desktop-small-width) {
-			padding-left: 15%;
-		}
-		@media (max-width: $tablet-medium-width) {
-			margin-top: 40px;
-		}
-		.zigzag-wrapper {
-			width: 0px;
-			height: 20px;
-			overflow: hidden;
-			transition: 1s;
-			transition-timing-function: ease-out;
-			margin-bottom: -10px;
-			&.visible {
-				transition-delay: 0.2s;
-				width: 70px;
-			}
-			.zigzag {
-				width: 70px;
-				stroke: var(--readable-primary-color);
-			}
-		}
-		.text-wrapper {
-			width: 100%;
-			margin-bottom: -40px;
-			overflow: hidden;
-			font-weight: 900;
-			color: var(--readable-primary-color);
-			.text {
-				font-size: 92px;
-				@media (max-width: $tablet-large-width) {
-					font-size: 62px;
-					margin-bottom: 10px;
-				}
-				margin: 0;
-				text-transform: uppercase;
-				transition: 0.5s;
-				transition-timing-function: ease-out;
-				transform: translateY(100%);
-				&.visible {
-					transform: translateY(0%);
-				}
-			}
-		}
-	}
-	.content-section {
-		display: flex;
-		@media (max-width: $desktop-small-width) {
-			align-items: unset;
-			flex-direction: column;
-		}
-		.text-section {
-			flex-basis: 50%;
-			padding-left: 15%;
-			padding-right: 5%;
-			@media (max-width: $desktop-small-width) {
-				padding-right: 15%;
-				padding-bottom: 40px;
-			}
-			.title-section {
-				color: var(--readable-primary-color);
-				padding: 0;
-				margin-top: 50px;
-				text-decoration: none;
-				&:hover {
-					color: var(--primary-color);
-					.title {
-						transform: translateX(10px);
-						transition-delay: 0.1s;
-					}
-					.sub-title {
-						transform: translateX(20px);
-						transition-delay: 0.05s;
-					}
-					.post-title {
-						transform: translateX(30px);
-						transition-delay: 0s;
-					}
-				}
-				.title {
-					margin: 0;
-					color: unset;
-					text-transform: uppercase;
-					font-size: 3.5em;
-					font-weight: 700;
-					transition: 0.2s;
-					@media (max-width: $tablet-large-width) {
-						font-size: 1.6em;
-					}
-				}
-				.sub-title {
-					margin: 0;
-					text-transform: uppercase;
-					text-decoration: none;
-					opacity: 0.5;
-					font-size: 1.5em;
-					font-weight: 700;
-					margin: -4px 0 0;
-					line-height: 24px;
-					transition: 0.2s;
-				}
-				.post-title {
-					margin: 0;
-					text-transform: uppercase;
-					text-decoration: none;
-					opacity: 0.5;
-					font-size: 1em;
-					font-weight: 700;
-					margin: 0;
-					transition: 0.2s;
-				}
-			}
-			.text {
-				font-size: 16px;
-				line-height: 32px;
-				color: var(--readable-faded-primary-color);
-				b {
-					color: var(--readable-primary-color);
-				}
-			}
-		}
-		.images-wrapper {
-			flex-basis: 50%;
-			display: flex;
-			@media (max-width: $desktop-small-width) {
-				display: none;
-			}
-			.phone-main-wrapper {
-				position: relative;
-				.phone-frame {
-					box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
-					width: 375px;
-					height: 712px;
-					border-radius: 30px;
-					border: solid black 10px;
-					overflow: hidden;
-					transform-style: preserve-3d;
-					@media (max-width: $tablet-large-width) {
-						width: calc(375px / 2);
-						height: calc(712px / 2);
-					}
-					transform-style: preserve-3d;
-					@media (max-width: $mobile-large-width) {
-						transform: unset !important;
-					}
-					.phone-notch {
-						width: 50%;
-						height: 20px;
-						margin: 0 auto;
-						border-radius: 0 0 10px 10px;
-						background: black;
-						position: relative;
-						z-index: 1;
-					}
-					.phone-content {
-						width: 100%;
-						// height: 2400px;
-						// background-image: url("../images/luxtripper/quote.png");
-						// background-position: center;
-						// background-size: cover;
-					}
-				}
-			}
-		}
-	}
+  @media (max-width: $desktop-small-width) {
+    padding: var(--border-width);
+  }
+  .title-section {
+    padding-left: 15%;
+    margin-bottom: 40px;
+    @media (max-width: $desktop-small-width) {
+      padding-left: 15%;
+    }
+    @media (max-width: $tablet-medium-width) {
+      margin-top: 40px;
+    }
+    .zigzag-wrapper {
+      width: 0px;
+      height: 20px;
+      overflow: hidden;
+      transition: 1s;
+      transition-timing-function: ease-out;
+      margin-bottom: -10px;
+      &.visible {
+        transition-delay: 0.2s;
+        width: 70px;
+      }
+      .zigzag {
+        width: 70px;
+        stroke: var(--readable-primary-color);
+      }
+    }
+    .text-wrapper {
+      width: 100%;
+      margin-bottom: -40px;
+      overflow: hidden;
+      font-weight: 900;
+      color: var(--readable-primary-color);
+      .text {
+        font-size: 92px;
+        @media (max-width: $tablet-large-width) {
+          font-size: 62px;
+          margin-bottom: 10px;
+        }
+        margin: 0;
+        text-transform: uppercase;
+        transition: 0.5s;
+        transition-timing-function: ease-out;
+        transform: translateY(100%);
+        &.visible {
+          transform: translateY(0%);
+        }
+      }
+    }
+  }
+  .content-section {
+    display: flex;
+    @media (max-width: $desktop-small-width) {
+      align-items: unset;
+      flex-direction: column;
+    }
+    .text-section {
+      flex-basis: 50%;
+      padding-left: 15%;
+      padding-right: 5%;
+      @media (max-width: $desktop-small-width) {
+        padding-right: 15%;
+        padding-bottom: 40px;
+      }
+      .title-section {
+        color: var(--readable-primary-color);
+        padding: 0;
+        margin-top: 50px;
+        text-decoration: none;
+        &:hover {
+          color: var(--primary-color);
+          .title {
+            transform: translateX(10px);
+            transition-delay: 0.1s;
+          }
+          .sub-title {
+            transform: translateX(20px);
+            transition-delay: 0.05s;
+          }
+          .post-title {
+            transform: translateX(30px);
+            transition-delay: 0s;
+          }
+        }
+        .title {
+          margin: 0;
+          color: unset;
+          text-transform: uppercase;
+          font-size: 3.5em;
+          font-weight: 700;
+          transition: 0.2s;
+          @media (max-width: $tablet-large-width) {
+            font-size: 1.6em;
+          }
+        }
+        .sub-title {
+          margin: 0;
+          text-transform: uppercase;
+          text-decoration: none;
+          opacity: 0.5;
+          font-size: 1.5em;
+          font-weight: 700;
+          margin: -4px 0 0;
+          line-height: 24px;
+          transition: 0.2s;
+        }
+        .post-title {
+          margin: 0;
+          text-transform: uppercase;
+          text-decoration: none;
+          opacity: 0.5;
+          font-size: 1em;
+          font-weight: 700;
+          margin: 0;
+          transition: 0.2s;
+        }
+      }
+      .text {
+        font-size: 16px;
+        line-height: 32px;
+        color: var(--readable-faded-primary-color);
+        b {
+          color: var(--readable-primary-color);
+        }
+      }
+    }
+    .images-wrapper {
+      margin-top: 700px;
+      flex-basis: 50%;
+      display: flex;
+      @media (max-width: $desktop-small-width) {
+        display: none;
+      }
+      .phone-main-wrapper {
+        position: relative;
+        .phone-frame {
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+          width: 375px;
+          height: 712px;
+          border-radius: 30px;
+          border: solid black 10px;
+          overflow: hidden;
+          transform-style: preserve-3d;
+          @media (max-width: $tablet-large-width) {
+            width: calc(375px / 2);
+            height: calc(712px / 2);
+          }
+          transform-style: preserve-3d;
+          @media (max-width: $mobile-large-width) {
+            transform: unset !important;
+          }
+          .phone-notch {
+            width: 50%;
+            height: 20px;
+            margin: 0 auto;
+            border-radius: 0 0 10px 10px;
+            background: black;
+            position: relative;
+            z-index: 1;
+          }
+          .phone-content {
+            width: 100%;
+            // height: 2400px;
+            // background-image: url("../images/luxtripper/quote.png");
+            // background-position: center;
+            // background-size: cover;
+          }
+        }
+      }
+    }
+  }
 }
